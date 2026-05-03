@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Babita | Full-Stack Developer & AI Enthusiast</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600;700&family=Space+Grotesk:wght@300;400;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════ LOADING SCREEN ═══════════════════════════════ -->
+  <div id="loading-screen">
+    <div class="loader-inner">
+      <div class="loader-logo">
+        <i class="fas fa-code"></i>
+        <span>Babita</span>
+      </div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar"></div>
+      </div>
+      <p class="loader-text">INITIALIZING...</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ CUSTOM CURSOR ═══════════════════════════════ -->
+  <div id="cursor-dot"></div>
+  <div id="cursor-outline"></div>
+
+  <!-- ═══════════════════════════════ SCROLL PROGRESS ═══════════════════════════════ -->
+  <div id="scroll-progress"></div>
+
+  <!-- ═══════════════════════════════ NAVBAR ═══════════════════════════════ -->
+  <!-- Replace your <nav> section with this improved version -->
+<nav id="navbar">
+  <div class="nav-container">
+    <a href="#hero" class="nav-logo">
+      <i class="fas fa-code"></i>
+      <span>B<span class="neon-cyan">.</span></span>
+    </a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#education" class="nav-link">Education</a></li>
+      <li><a href="#experience" class="nav-link">Experience</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button id="theme-toggle" class="theme-toggle-mobile" aria-label="Toggle theme">
+        <i class="fas fa-sun" id="theme-icon"></i>
+      </button>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <h1 class="hero-name">
+        <span class="name-line">Babita</span>
+        <span class="name-line accent">Bhattarai</span>
+      </h1>
+      <div class="hero-typed-wrap">
+        <span id="typed-output"></span><span class="typed-cursor">|</span>
+      </div>
+      <p class="hero-desc">
+        Building intelligent full-stack systems at the intersection of<br />
+        <span class="neon-pink">beautiful design</span> and <span class="neon-cyan">AI-powered logic.</span>
+      </p>
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> Explore Work
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i class="fas fa-paper-plane"></i> Contact Me
+        </a>
+        <button class="btn btn-ghost" onclick="handleCVDownload()">
+          <i class="fas fa-download"></i> View CV
+        </button>
+      </div>
+      <div class="hero-scroll-hint">
+        <span>Scroll to explore</span>
+        <div class="scroll-line"></div>
+      </div>
+    </div>
+    <div class="hero-profile-float">
+      <div class="profile-glow-ring">
+        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Babita " class="hero-avatar" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+  <section id="about">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// ABOUT_ME</span>
+        <h2>Who I Am</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-visual" data-aos="fade-right">
+          <div class="about-img-wrap" id="about-tilt">
+            <div class="about-img-glow"></div>
+            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Babita" class="about-img" />
+            <div class="about-logo-badge">
+              <i class="fas fa-code"></i>
+              <span>B.BBBB</span>
+            </div>
+          </div>
+          <div class="about-stats">
+            <div class="stat-card glass">
+              <span class="stat-number" data-target="40">0</span><span>+</span>
+              <p>Projects</p>
+            </div>
+            <div class="stat-card glass">
+              <span class="stat-number" data-target="3">0</span><span>+</span>
+              <p>Years Coding</p>
+            </div>
+            <div class="stat-card glass">
+              <span class="stat-number" data-target="10">0</span><span>+</span>
+              <p>Clients</p>
+            </div>
+          </div>
+        </div>
+        <div class="about-text" data-aos="fade-left">
+          <h3>Full-Stack Developer <span class="neon-cyan">&amp;</span> AI Enthusiast</h3>
+          <p>
+            I'm a <strong>CSIT student</strong> from Kathmandu, Nepal, passionate about building end-to-end applications that blend elegant interfaces with powerful AI-driven backends. From crafting reactive UIs in <span class="neon-cyan">React</span> to deploying intelligent pipelines using <span class="neon-pink">RAG and LLMs</span>, I work across the full stack.
+          </p>
+          <p>
+            My Linux-first mindset means I'm comfortable wiring up servers, automating workflows with Bash, and shipping production-ready applications. I believe great software is both <em>technically sound</em> and <em>visually beautiful</em>.
+          </p>
+          <div class="about-tags">
+            <span class="tag"><i class="fab fa-python"></i> Python</span>
+            <span class="tag"><i class="fab fa-react"></i> React</span>
+            <span class="tag"><i class="fas fa-brain"></i> AI/ML</span>
+            <span class="tag"><i class="fab fa-linux"></i> Linux</span>
+            <span class="tag"><i class="fas fa-database"></i> Databases</span>
+            <span class="tag"><i class="fas fa-robot"></i> RAG/LLMs</span>
+          </div>
+          <a href="#contact" class="btn btn-primary mt-2">
+            <i class="fas fa-handshake"></i> Let's Collaborate
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ EDUCATION ═══════════════════════════════ -->
+  <section id="education">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// EDUCATION</span>
+        <h2>Academic Journey</h2>
+      </div>
+      <div class="timeline">
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot"><i class="fas fa-school"></i></div>
+          <div class="timeline-card glass">
+            <div class="timeline-year">2014 – 2018</div>
+            <h3>Sunrise Academy High School</h3>
+            <p class="timeline-sub">Secondary Education (SEE)</p>
+            <p>Completed schooling with distinction. Developed early interest in mathematics, computer science, and logical problem-solving.</p>
+            <div class="timeline-tags">
+              <span class="tag small">Mathematics</span>
+              <span class="tag small">Science</span>
+              <span class="tag small">Computer Basics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item right" data-aos="fade-left">
+          <div class="timeline-dot"><i class="fas fa-flask"></i></div>
+          <div class="timeline-card glass">
+            <div class="timeline-year">2018 – 2020</div>
+            <h3>Cosmos College of Science & Technology</h3>
+            <p class="timeline-sub">+2 (Higher Secondary) — Science with Computer Science</p>
+            <p>Focused on Physics, Mathematics, and Computer Science. First exposure to programming (C language) and web technologies sparked a deeper passion for software development.</p>
+            <div class="timeline-tags">
+              <span class="tag small">C Programming</span>
+              <span class="tag small">Physics</span>
+              <span class="tag small">Web Basics</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item" data-aos="fade-right">
+          <div class="timeline-dot neon-active"><i class="fas fa-graduation-cap"></i></div>
+          <div class="timeline-card glass active-card">
+            <div class="timeline-year">2021 – Present</div>
+            <h3>Bachelor of Science in CSIT</h3>
+            <p class="timeline-sub">Tribhuvan University — Kathmandu, Nepal</p>
+            <p>Pursuing a comprehensive CS degree with electives in <strong>Artificial Intelligence</strong>, <strong>Machine Learning</strong>, and <strong>Data Science</strong>. Active in hackathons, open-source projects, and college tech clubs.</p>
+            <div class="timeline-tags">
+              <span class="tag small neon">AI/ML Electives</span>
+              <span class="tag small neon">Data Structures</span>
+              <span class="tag small neon">Algorithms</span>
+              <span class="tag small neon">DBMS</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ EXPERIENCE ═══════════════════════════════ -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// WORK_EXP</span>
+        <h2>Professional Experience</h2>
+      </div>
+      <div class="exp-grid">
+
+        <div class="exp-card glass" data-aos="fade-up" data-aos-delay="0">
+          <div class="exp-icon">
+            <i class="fas fa-laptop-code"></i>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <h3>Full Stack Developer Intern</h3>
+              <span class="exp-date">Jan 2023 – Jul 2023</span>
+            </div>
+            <p class="exp-company"><i class="fas fa-building"></i> TechNova Solutions — Kathmandu</p>
+            <ul class="exp-duties">
+              <li>Built a React + Django admin dashboard with real-time analytics and PostgreSQL backend.</li>
+              <li>Implemented REST APIs using Django REST Framework, increasing data throughput by 40%.</li>
+              <li>Deployed the app on an Ubuntu server with Nginx + Gunicorn configuration.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="tag small">React</span>
+              <span class="tag small">Django</span>
+              <span class="tag small">PostgreSQL</span>
+              <span class="tag small">Linux</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-card glass" data-aos="fade-up" data-aos-delay="100">
+          <div class="exp-icon neon-pink-icon">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <h3>Machine Learning Intern</h3>
+              <span class="exp-date">Feb 2024 – Aug 2024</span>
+            </div>
+            <p class="exp-company"><i class="fas fa-building"></i> AI Labs Nepal — Remote</p>
+            <ul class="exp-duties">
+              <li>Developed a sentiment analysis model achieving 91% accuracy using scikit-learn and pandas.</li>
+              <li>Built data pipelines to process 50k+ customer reviews and produced actionable visualizations using Seaborn/Matplotlib.</li>
+              <li>Explored LangChain-based RAG pipelines for internal document Q&A prototyping.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="tag small">scikit-learn</span>
+              <span class="tag small">pandas</span>
+              <span class="tag small">LangChain</span>
+              <span class="tag small">RAG</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-card glass" data-aos="fade-up" data-aos-delay="200">
+          <div class="exp-icon neon-purple-icon">
+            <i class="fas fa-briefcase"></i>
+          </div>
+          <div class="exp-content">
+            <div class="exp-header">
+              <h3>Freelance Full-Stack Developer</h3>
+              <span class="exp-date">2022 – Present</span>
+            </div>
+            <p class="exp-company"><i class="fas fa-globe"></i> Self-Employed — Worldwide</p>
+            <ul class="exp-duties">
+              <li>Delivered 10+ websites, web apps, and AI chatbots for clients across Nepal and internationally.</li>
+              <li>Built FastAPI + React SaaS tools, integrating OpenAI APIs and custom vector-database pipelines.</li>
+              <li>Maintained 100% client satisfaction rating with on-time delivery and iterative design sprints.</li>
+            </ul>
+            <div class="exp-tags">
+              <span class="tag small">FastAPI</span>
+              <span class="tag small">React</span>
+              <span class="tag small">OpenAI</span>
+              <span class="tag small">Freelance</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ SKILLS ═══════════════════════════════ -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// SKILL_TREE</span>
+        <h2>Technical Arsenal</h2>
+      </div>
+      <div class="skills-grid">
+
+        <!-- Languages -->
+        <div class="skill-category glass" data-aos="fade-up" data-aos-delay="0">
+          <button class="skill-toggle" aria-expanded="false">
+            <div class="skill-cat-label">
+              <i class="fas fa-code skill-cat-icon"></i>
+              <span>Languages</span>
+            </div>
+            <i class="fas fa-chevron-down skill-arrow"></i>
+          </button>
+          <div class="skill-content" hidden>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-python"></i> Python <span>90%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-js"></i> JavaScript <span>85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-c"></i> C / C++ <span>75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-database"></i> SQL <span>80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="skill-category glass" data-aos="fade-up" data-aos-delay="50">
+          <button class="skill-toggle" aria-expanded="false">
+            <div class="skill-cat-label">
+              <i class="fas fa-palette skill-cat-icon"></i>
+              <span>Frontend</span>
+            </div>
+            <i class="fas fa-chevron-down skill-arrow"></i>
+          </button>
+          <div class="skill-content" hidden>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-react"></i> React <span>85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-n"></i> Next.js <span>78%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-html5"></i> HTML/CSS <span>92%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="92"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-sass"></i> Tailwind/SCSS <span>80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-category glass" data-aos="fade-up" data-aos-delay="100">
+          <button class="skill-toggle" aria-expanded="false">
+            <div class="skill-cat-label">
+              <i class="fas fa-server skill-cat-icon"></i>
+              <span>Backend</span>
+            </div>
+            <i class="fas fa-chevron-down skill-arrow"></i>
+          </button>
+          <div class="skill-content" hidden>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-node-js"></i> Node.js <span>82%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-dragon"></i> Django <span>80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-bolt"></i> FastAPI <span>78%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-plug"></i> REST APIs <span>88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Databases -->
+        <div class="skill-category glass" data-aos="fade-up" data-aos-delay="150">
+          <button class="skill-toggle" aria-expanded="false">
+            <div class="skill-cat-label">
+              <i class="fas fa-database skill-cat-icon"></i>
+              <span>Databases</span>
+            </div>
+            <i class="fas fa-chevron-down skill-arrow"></i>
+          </button>
+          <div class="skill-content" hidden>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-elephant"></i> PostgreSQL <span>82%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-fish"></i> MySQL <span>80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-leaf"></i> MongoDB <span>75%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-cube"></i> SQLite <span>85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ML & Data -->
+        <div class="skill-category glass" data-aos="fade-up" data-aos-delay="200">
+          <button class="skill-toggle" aria-expanded="false">
+            <div class="skill-cat-label">
+              <i class="fas fa-chart-line skill-cat-icon"></i>
+              <span>ML &amp; Data</span>
+            </div>
+            <i class="fas fa-chevron-down skill-arrow"></i>
+          </button>
+          <div class="skill-content" hidden>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-cogs"></i> scikit-learn <span>84%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="84"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-table"></i> pandas <span>88%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-calculator"></i> NumPy <span>85%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-chart-bar"></i> Matplotlib/Seaborn <span>80%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-fire"></i> TensorFlow <span>70%</span></div>
+              <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AI Advanced -->
+        <div class="skill-category glass" data-aos="fade-up" data-aos-delay="250">
+          <button class="skill-toggle" aria-expanded="false">
+            <div class="skill-cat-label">
+              <i class="fas fa-robot skill-cat-icon neon-pink-icon"></i>
+              <span>AI Advanced</span>
+            </div>
+            <i class="fas fa-chevron-down skill-arrow"></i>
+          </button>
+          <div class="skill-content" hidden>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-search"></i> RAG Pipelines <span>78%</span></div>
+              <div class="skill-bar"><div class="skill-fill pink" data-width="78"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-link"></i> LangChain <span>74%</span></div>
+              <div class="skill-bar"><div class="skill-fill pink" data-width="74"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-vector-square"></i> Vector DBs (FAISS) <span>72%</span></div>
+              <div class="skill-bar"><div class="skill-fill pink" data-width="72"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-comment-dots"></i> LLM Integration <span>76%</span></div>
+              <div class="skill-bar"><div class="skill-fill pink" data-width="76"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DevOps/Linux -->
+        <div class="skill-category glass" data-aos="fade-up" data-aos-delay="300">
+          <button class="skill-toggle" aria-expanded="false">
+            <div class="skill-cat-label">
+              <i class="fab fa-linux skill-cat-icon neon-purple-icon"></i>
+              <span>DevOps / Linux</span>
+            </div>
+            <i class="fas fa-chevron-down skill-arrow"></i>
+          </button>
+          <div class="skill-content" hidden>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-terminal"></i> Bash / Shell <span>82%</span></div>
+              <div class="skill-bar"><div class="skill-fill purple" data-width="82"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-docker"></i> Docker <span>70%</span></div>
+              <div class="skill-bar"><div class="skill-fill purple" data-width="70"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fab fa-git-alt"></i> Git / GitHub <span>88%</span></div>
+              <div class="skill-bar"><div class="skill-fill purple" data-width="88"></div></div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><i class="fas fa-network-wired"></i> Nginx / Gunicorn <span>72%</span></div>
+              <div class="skill-bar"><div class="skill-fill purple" data-width="72"></div></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PROJECTS ═══════════════════════════════ -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// FEATURED_WORK</span>
+        <h2>Projects That Ship</h2>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card glass" data-aos="fade-up" data-aos-delay="0">
+          <div class="project-img-wrap">
+            <img src="https://picsum.photos/id/1/400/220" alt="E-Commerce Store" loading="lazy" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Live</a>
+              <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Full-Stack</span>
+            <h3>E-Commerce Store</h3>
+            <p>Feature-rich online store with product management, cart, Stripe payments, and admin dashboard.</p>
+            <div class="project-tags">
+              <span>React</span><span>Node.js</span><span>MongoDB</span><span>Stripe</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass featured" data-aos="fade-up" data-aos-delay="50">
+          <div class="project-img-wrap">
+            <img src="https://picsum.photos/id/20/400/220" alt="Social Dashboard" loading="lazy" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Live</a>
+              <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Full-Stack</span>
+            <h3>Social Media Dashboard</h3>
+            <p>Multi-user analytics dashboard with real-time feeds, notifications, and graph visualizations.</p>
+            <div class="project-tags">
+              <span>Django</span><span>PostgreSQL</span><span>Redis</span><span>Chart.js</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass" data-aos="fade-up" data-aos-delay="100">
+          <div class="project-img-wrap">
+            <img src="https://picsum.photos/id/42/400/220" alt="Cloud Notes" loading="lazy" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Live</a>
+              <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Full-Stack</span>
+            <h3>Cloud Notes App</h3>
+            <p>Markdown-based note-taking app with tagging, search, and user auth via JWT.</p>
+            <div class="project-tags">
+              <span>FastAPI</span><span>SQLite</span><span>React</span><span>JWT</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass" data-aos="fade-up" data-aos-delay="150">
+          <div class="project-img-wrap">
+            <img src="https://picsum.photos/id/65/400/220" alt="Real-Time Chat" loading="lazy" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Live</a>
+              <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-category">Full-Stack</span>
+            <h3>Real-Time Chat App</h3>
+            <p>WebSocket-powered group chat with rooms, presence indicators, and message history.</p>
+            <div class="project-tags">
+              <span>Node.js</span><span>Socket.io</span><span>MySQL</span><span>React</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass" data-aos="fade-up" data-aos-delay="200">
+          <div class="project-img-wrap">
+            <img src="https://via.placeholder.com/400x220/0A0A0F/00F0FF?text=Confusion+Matrix+%2B+ROC" alt="Churn Prediction" loading="lazy" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Live</a>
+              <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-category neon-pink">ML / Data</span>
+            <h3>Customer Churn Prediction</h3>
+            <p>Binary classifier (91% accuracy) with feature engineering, SHAP explainability, and a Streamlit dashboard.</p>
+            <div class="project-tags">
+              <span>scikit-learn</span><span>pandas</span><span>Matplotlib</span><span>Streamlit</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card glass featured-ai" data-aos="fade-up" data-aos-delay="250">
+          <div class="project-img-wrap">
+            <img src="https://via.placeholder.com/400x220/0A0A0F/B026FF?text=RAG+%7C+LangChain+%7C+FAISS" alt="RAG Q&A" loading="lazy" />
+            <div class="project-overlay">
+              <a href="#" class="btn btn-sm btn-primary"><i class="fas fa-external-link-alt"></i> Live</a>
+              <a href="#" class="btn btn-sm btn-outline"><i class="fab fa-github"></i> Code</a>
+            </div>
+          </div>
+          <div class="project-content">
+            <span class="project-category neon-purple">AI / RAG</span>
+            <h3>RAG Document Q&amp;A</h3>
+            <p>Upload PDFs and ask questions in natural language. Built with LangChain, FAISS vector store, and OpenAI-compatible LLMs.</p>
+            <div class="project-tags">
+              <span>LangChain</span><span>FAISS</span><span>FastAPI</span><span>React</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ AI INTERESTS ═══════════════════════════════ -->
+  <section id="ai-interests">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// INTERESTS</span>
+        <h2>Where I'm Headed</h2>
+      </div>
+      <div class="interests-grid">
+        <div class="interest-card glass" data-aos="fade-up" data-aos-delay="0">
+          <div class="interest-icon"><i class="fas fa-search"></i></div>
+          <h3>RAG Systems</h3>
+          <p>Building retrieval-augmented generation pipelines that combine the power of vector search with large language models to create context-aware, grounded AI apps.</p>
+        </div>
+        <div class="interest-card glass" data-aos="fade-up" data-aos-delay="100">
+          <div class="interest-icon neon-pink-icon"><i class="fas fa-robot"></i></div>
+          <h3>LLM Integration</h3>
+          <p>Integrating open-source and proprietary LLMs into full-stack products — from chatbots and code assistants to intelligent document analyzers.</p>
+        </div>
+        <div class="interest-card glass" data-aos="fade-up" data-aos-delay="200">
+          <div class="interest-icon neon-purple-icon"><i class="fas fa-layer-group"></i></div>
+          <h3>End-to-End AI Apps</h3>
+          <p>Designing and shipping complete intelligent applications — beautiful React frontends backed by FastAPI/Django with ML models embedded at every layer.</p>
+        </div>
+        <div class="interest-card glass" data-aos="fade-up" data-aos-delay="300">
+          <div class="interest-icon"><i class="fas fa-microchip"></i></div>
+          <h3>Agentic AI</h3>
+          <p>Exploring autonomous AI agents that can plan, use tools, browse the web, and execute multi-step workflows — the frontier of applied AI engineering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">// REACH_OUT</span>
+        <h2>Get In Touch</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info" data-aos="fade-right">
+          <h3>Let's Build Something <span class="neon-cyan">Extraordinary</span></h3>
+          <p>Whether you have a project idea, need a collaborator, or just want to talk AI and code — my inbox is always open.</p>
+          <div class="contact-details">
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <span>Babita@example.com</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <span>Kathmandu, Nepal 🇳🇵</span>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-clock"></i>
+              <span>NPT (UTC+5:45) — Available Mon–Sat</span>
+            </div>
+          </div>
+          <div class="social-links">
+            <a href="#" class="social-btn" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+          <button class="btn btn-primary mt-2" onclick="handleCVDownload()">
+            <i class="fas fa-download"></i> Download CV
+          </button>
+        </div>
+        <div class="contact-form-wrap" data-aos="fade-left">
+          <div class="contact-form glass">
+            <div class="form-group">
+              <label for="name">Your Name</label>
+              <input type="text" id="name" placeholder="John Doe" />
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="john@example.com" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Tell me about your project..."></textarea>
+            </div>
+            <button class="btn btn-primary w-full" id="submit-btn" onclick="handleFormSubmit()">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <i class="fas fa-code"></i>
+          <span>Babita<span class="neon-cyan">.</span></span>
+        </div>
+        <p class="footer-copy">© 2025 Babita — Crafted with <span class="neon-pink">♥</span> in Kathmandu, Nepal</p>
+        <div class="footer-actions">
+          <button id="footer-theme-toggle" onclick="toggleTheme()">
+            <i class="fas fa-moon" id="footer-theme-icon"></i>
+          </button>
+          <a href="#hero" id="back-to-top" aria-label="Back to top">
+            <i class="fas fa-arrow-up"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════ SCRIPTS ═══════════════════════════════ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
